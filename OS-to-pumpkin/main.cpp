@@ -40,7 +40,7 @@ int main() {
     int choice;
     std::cin >> choice;
     std::cout << std::endl;
-    if (choice != 1 and choice != 2){
+    if (choice != 1 && choice != 2){
         std::cout << "\nError: unknown mode\n";
         return 1;
     }
@@ -50,6 +50,7 @@ int main() {
         memory = new char[MEM_SIZE * 1024]; 
     } catch (const std::bad_alloc &e) {
         std::cerr << "\nError allocating memory: " << e.what() << std::endl;
+        return 1;
     }
     
     std::cout << "\nMemory is allocated";
